@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="forum" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ИТ в България</title>
+
+  <meta name="viewport" content="width=device-width,initial scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+<div class="overlay hidden"></div>
+<nav>
+
+
+  <label for="drop" class="toggle">Menu</label>
+  <input type="checkbox" id="drop" />
+  <ul class="menu">
+    <li><a href="index.html">Начало</a></li>
+    <li><label for="drop-2" class="toggle">Университети</label>
+      <a href="#">Университети</a>
+      <input type="checkbox" id="drop-2" />
+      <ul>
+        <li><a href="sofia.html">София</a></li>
+        <li><a href="plovdiv.html">Пловдив</a></li>
+        <li><a href="varna.html">Варна</a></li>
+        <li><a href="burgas.html">Бургас</a></li>
+
+      </ul>
+    </li>
+    <li><a href="forum.html">Форум</a></li>
+    <li><a href="contacts.html">Контакти</a></li>
+
+  </ul>
+</nav>
+<!----------FORUM--------->
+<!--SearchBox Section-->
+<div class="search-box">
+  <div>
+    <select name="" >
+      <option value="Everything">Всичко</option>
+      <option value="Titles">Заглавие</option>
+      <option value="Descriptions">Потребител</option>
+    </select>
+    <input type="text" name="q" placeholder="search ...">
+    <button><i class="fa fa-search"></i></button>
+  </div>
+</div>
+</header>
+<div class="container">
+  <!--Navigation-->
+  <div class="navigate">
+    <span><a href="">MyForum - Forums</a> >> <a href="">random subforum</a> >> <a href="">random topic</a></span>
+  </div>
+
+  <!--Topic Section-->
+  <div class="topic-container">
+    <!--Original thread-->
+    <div class="head">
+      <div class="authors">Author</div>
+      <div class="content">Topic: random topic (Read 1325 Times)</div>
+    </div>
+
+    <div class="body">
+      <div class="authors">
+        <div class="username"><a href="">Username</a></div>
+        <div>Role</div>
+        <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+        <div>Posts: <u>45</u></div>
+        <div>Points: <u>4586</u></div>
+      </div>
+      <div class="content">
+        Just a random content of a random topic.
+        <br>To see how it looks like.
+        <br><br>
+        Nothing more and nothing less.
+        <br>
+        <hr>
+        Regards username
+        <br>
+        <div class="comment">
+          <button onclick="showComment()">Comment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Comment Area-->
+  <div class="comment-area hide" id="comment-area">
+    <textarea name="comment"  placeholder="comment here ... "></textarea>
+    <input type="submit" onclick="hideComment()" value="submit">
+  </div>
+
+  <!--Comments Section-->
+  <div class="comments-container">
+    <div class="body">
+      <div class="authors">
+        <div class="username"><a href="">AnotherUser</a></div>
+        <div>Role</div>
+        <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+        <div>Posts: <u>455</u></div>
+        <div>Points: <u>4586</u></div>
+      </div>
+      <div class="content">
+        Just a comment of the above random topic.
+        <br>To see how it looks like.
+        <br><br>
+        Nothing more and nothing less.
+        <br>
+        <br>
+        <div class="comment">
+          <button onclick="showReply()">Reply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Reply Area-->
+  <div class="comment-area hide" >
+    <textarea name="reply"  placeholder="reply here ... "></textarea>
+    <input type="submit" onclick="hideComment()" value="submit">
+  </div>
+
+
+  <!--Another Comment With replies-->
+  <div class="comments-container">
+    <div class="body">
+      <div class="authors">
+        <div class="username"><a href="">AnotherUser</a></div>
+        <div>Role</div>
+        <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+        <div>Posts: <u>455</u></div>
+        <div>Points: <u>4586</u></div>
+      </div>
+      <div class="content">
+        Just a comment of the above random topic.
+        <br>To see how it looks like.
+        <br><br>
+        Nothing more and nothing less.
+        <br>
+        <br>
+        <div class="comment">
+          <button onclick="showReply()">Reply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Reply Area-->
+  <div class="comment-area hide" id="reply-area">
+    <textarea name="reply" id="" placeholder="reply here ... "></textarea>
+    <input type="submit" onclick="hideComment()" value="submit">
+  </div>
+
+
+
+</div>
+
+
+
+<!---------- FOOTER ---------->
+<section id="footer">
+  <div class="container footer-row">
+    <hr>
+    <div class="footer-left-col">
+      <div class="footer-links">
+        <div class="link-title">
+          <h3>Анкети</h3>
+          <small>Активни анкети</small><br>
+          <small>Архив</small>
+        </div>
+        <div class="link-title">
+          <h3>Университети</h3>
+          <small>Топ университети</small><br>
+
+        </div>
+        <div class="link-title">
+          <h3>Форум</h3>
+          <small>Последни теми</small><br>
+          <small>Състезания</small>
+        </div>
+        <div class="link-title">
+          <h3>Контакт</h3>
+          <small>Бърза връзка с нас</small><br>
+          <small>Повече за нас</small>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right-col">
+      <div class="footer-info">
+        <div class="copyright-text">
+          <small>Kalintodorov87@gmail.com</small><br>
+          <small>copyright 2021 </small>
+        </div>
+        <div class="footer-logo">
+          <img src="images/logo1.png">
+          <button onclick="topFunction()" id="myBtn" title="Go to top">Начало</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<script src="script.js"></script>
+</body>
+
+</html>
